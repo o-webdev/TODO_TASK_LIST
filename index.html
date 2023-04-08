@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <title>ToDo Task List</title>
+  </head>
+  <body>
+    <header>
+      <h1>ToDo Task list</h1>
+      <form id="new-task-form">
+        <input
+          type="text"
+          id="new-task-input"
+          placeholder="Enter task you want to add"
+        />
+        <input type="submit" id="new-task-submit" value="Add task" />
+        <button id="reset-btn">Reset All</button>
+      </form>
+    </header>
+
+    <main>
+      <nav>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-toggle="tab"
+              data-target="#home"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Home
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-toggle="tab"
+              data-target="#functionality"
+              type="button"
+              role="tab"
+              aria-controls="functionality"
+              aria-selected="false"
+            >
+              Functionality
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-toggle="tab"
+              data-target="#tech-spec"
+              type="button"
+              role="tab"
+              aria-controls="tech-spec"
+              aria-selected="false"
+            >
+              Tech-Spec
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-toggle="tab"
+              data-target="#features"
+              type="button"
+              role="tab"
+              aria-controls="features"
+              aria-selected="false"
+            >
+              Features
+            </button>
+        </li>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            This project involves creating a simple to-do task list application
+            that allows users to input tasks and store them using local storage.
+            The application has a user-friendly interface with
+            easy-to-use functions.
+          </div>
+          <div
+            class="tab-pane fade"
+            id="functionality"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          >
+            <ol>
+              <li>
+                Add tasks: Users can input tasks into the application using a
+                text input field and a "Add Task" button
+              </li>
+              <li>
+                Edit tasks: Users can edit a task and save the changes to both 
+                the innerHTML and local storage.
+              </li>
+              <li>
+                Remove tasks: Users can delete tasks by clicking on the "Delete"
+                button associated with each task.
+              </li>
+              <li>
+                Reset all  tasks: Users can clear all the listed tasks by clicking the "Reset All" button.
+              </li>
+            </ol>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="tech-spec"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <ol>
+              <li>The application is built using HTML, CSS, and JavaScript.</li>
+              <li>
+                The tasks entered by users will be stored using local storage.
+              </li>
+              <li>
+                The application uses event listeners to capture user input
+                and perform the necessary actions (add, delete, edit, reset.).
+              </li>
+              <li>
+                The application uses a responsive design to ensure that it
+                works well on different screen sizes.
+              </li>
+            </ol>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="features"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+          <ol>
+            <li>
+                User-friendly interface: The application has a clean and simple interface that is easy to use.
+            </li>
+            <li>
+                Local storage: The application uses local storage to store the tasks entered by users, ensuring that the tasks are saved even if the user closes or refreshes the application.
+            </li>
+             <li>
+                Task manipulation: The application allows users to easily add, delete, edit and clear tasks.
+            </li>
+            <li>
+                Reset and clear tasks: The application allows users to clear all tasks at once with a button click which removes from local storage also.
+            </li>
+        </ol>
+        </div>
+      </nav>
+      <section class="task-list">
+        <h2>Tasks</h2>
+
+        
+
+        <div id="tasks">
+          <div id="custom-modal" class="modal">
+            <div class="modal-content">
+              <button id="close-modal-btn">❌</button>
+              <p>Please add a task</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
