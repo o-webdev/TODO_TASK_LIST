@@ -26,6 +26,59 @@ header h1 {
     margin-bottom: 1rem;
 }
 
+#toggle-mode-btn {
+    margin-left: auto !important;
+ }
+
+/* Light mode */
+body:not(.dark){
+    background: #fff;
+    color: #000;
+  }
+  .nav-link:not(.dark) {
+    color: #fff;
+    background: #000;
+    border: 0.5px #fff solid;
+  }
+
+ #new-task-submit:not(.dark) {
+    border: 1px #000 solid;
+ }
+
+ #toggle-mode-btn:not(.dark) {
+    display: flex;
+    justify-content: right;
+    width: 50px;
+    margin: 20px;
+    border: 1.5px #000 solid;
+    border-radius: 50px;
+  }
+  
+  /* Dark mode */
+  body.dark{
+    background: #000;
+    color: #fff;
+  }
+  .dark #new-task-submit {
+    border: 1px #fff solid;
+  }
+
+  .dark #toggle-mode-btn {
+    color: #fff !important;
+    margin-left: 0 auto;
+  }
+  .dark #toggle-mode-btn {
+    display: flex;
+    justify-content: left;
+    border: 1px #fff solid;
+    transition: .3s;
+  }
+  
+  .dark .nav-link{
+    border: #fff 0.5px solid;
+  }
+  
+
 #new-task-from {
     display: flex;
 }
@@ -42,6 +95,9 @@ input, button {
 }
 .nav-link {
     color: #fff;
+}
+#myTab {
+    margin: 16px;
 }
 
 #new-task-input {
@@ -108,6 +164,9 @@ main {
     margin-bottom: 1rem;
 }
 #reset-btn {
+    color: #000;
+}
+.dark #reset-btn {
     color: #fff;
 }
 
@@ -201,3 +260,93 @@ main {
     background-color: transparent;
     cursor: pointer;
   }
+
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px 0;
+  }
+  
+  footer a {
+    display: inline-flex;
+    color: #000;
+    font-size: 25px;
+  }
+  .dark footer a {
+    color: #fff;
+  }
+
+  /* ========== BREAKPOINTS ============ */
+/* For large devices */
+@media screen and (max-width: 992px) {
+    
+  }
+  
+  /* For medium devices */
+  @media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+    #new-task-input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .nav-link {
+        font-size: 10px;
+    }
+    .tab-pane {
+        margin: 10px;
+    }
+    #new-task-submit {
+        font-size: 15px;
+    }
+    button.edit, button.delete {
+        font-size: 12px !important;
+    }
+    #custom-modal {
+        margin-top: 50%;
+    }
+    #custom-modal p {
+        justify-content: center;
+        margin: auto;
+    }
+    input.task {
+        overflow-wrap: break-word !important;
+    }
+  }
+  
+  /* For small devices */
+  @media screen and (max-width: 350px) {
+    header h1 {
+        font-size: 28px;
+    }
+    #new-task-input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .nav-link {
+        font-size: 9px;
+    }
+    .tab-pane {
+        margin: 10px;
+    }
+    #new-task-submit {
+        font-size: 15px;
+    }
+    button.edit, button.delete {
+        font-size: 12px !important;
+    }
+    #custom-modal {
+        margin-top: 50%;
+    }
+    #custom-modal p {
+        justify-content: center;
+        margin: auto;
+    }
+    input.task {
+        overflow-wrap: break-word !important;
+    }
+
+    
+  }
+  
