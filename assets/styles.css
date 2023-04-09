@@ -316,7 +316,7 @@ main {
   }
   
   /* For small devices */
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 450px) {
     header h1 {
         font-size: 28px;
     }
